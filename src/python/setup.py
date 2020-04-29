@@ -44,9 +44,9 @@ def make_valid_pypi_version(raw):
 #
 # The result of this trickery is a variable called "version", initialized
 # to the current version of dxpy.
-with open(os.path.join(os.path.dirname(__file__), 'dxpy', 'toolkit_version.py')) as fh:
-    exec(compile(fh.read(), 'toolkit_version.py', 'exec'))
-version = make_valid_pypi_version(version)
+#with open(os.path.join(os.path.dirname(__file__), 'dxpy', 'toolkit_version.py')) as fh:
+#    exec(compile(fh.read(), 'toolkit_version.py', 'exec'))
+#version = make_valid_pypi_version(version)
 
 # The readme file is used as the long-description of the package.
 # It will show up in the pypi site.
@@ -99,7 +99,7 @@ for directory, subdirectories, files in os.walk("dxpy/templating/templates"):
 
 setup(
     name='dxpy',
-    version=version,
+    version='0.294.0',
     description='DNAnexus Platform API bindings for Python',
     long_description=readme_content,
     long_description_content_type="text/markdown",
